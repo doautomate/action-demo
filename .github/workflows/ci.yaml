@@ -1,4 +1,5 @@
 name: Manual Trigger Workflow with username
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 #get username information
 on: 
   workflow_dispatch:
