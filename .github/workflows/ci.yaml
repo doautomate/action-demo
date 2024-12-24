@@ -3,9 +3,18 @@ name: Manual Trigger Workflow with username
 on: 
   workflow_dispatch:
     inputs:
-      username:
-        description: 'select user'
-        default: ''
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'information'
+        type: choice
+        options:
+          - information
+          - debug
+          - warning
+          - critical
+      tags:
+        description: 'Purpose of Run This Workflow?'
         required: true
         type: string
 
